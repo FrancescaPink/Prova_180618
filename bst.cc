@@ -9,7 +9,7 @@ using namespace std;
 
 #include <cstring>
 
-#include "tipo.h"
+#include "carta.h"
 #include "bst.h"
 
 static tipo_key copy_key(tipo_key& s,tipo_key s1){
@@ -143,4 +143,17 @@ void bst_delete(bst& b, bnode* n){
 	    	update_father(n, new_child);
 	  delete n;
 
+}
+
+void stampa_crescente(bst tree){
+	if(tree==NULL){
+		return;
+	}
+    if(get_left(tree)!=NULL){
+        stampa_crescente(tree->left);
+    }
+    print(tree->inf);
+    if(get_right(tree)!=NULL){
+        stampa_crescente(tree->right);
+	}
 }

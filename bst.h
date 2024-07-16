@@ -1,3 +1,7 @@
+#ifndef BST_H
+#define BST_H
+
+#include "carta.h"
 
 typedef int tipo_key;
 
@@ -23,7 +27,9 @@ void print_key(tipo_key);
 bnode* bst_search(bst,tipo_key);
 void bst_delete(bst&, bnode*);
 
+void stampa_crescente (bnode *);
 
+#endif
 
 
 
